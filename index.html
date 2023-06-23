@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Photoshop</title>
+  </head>
+  <body>
+
+    <div class="container">
+      <header>
+        <div class="manage">
+          <div class="cont-manage">
+            <span style="cursor: default;" class="logo"><img src="./public/assets/photoshop.png" style="margin-block: 4px; cursor: default;" width="16px" height="16px" alt="logo"></span>
+            <span id="file-cont">File 
+            <ul id="file-tab" class="file-tab hide-header">
+              <li id="new"><span>New...</span><span>Ctrl+N</span></li>
+              <li><span>Open...</span><span>Ctrl+O</span></li>
+              <li><span>Browse in Bridge...</span><span>Alt+Ctrl+O</span></li>
+              <li><span>Open As...</span><span>Alt+Shift+Ctrl+O</span></li>
+              <li><span>Open as Smart Object...</span></li>
+              <li><span>Open Recent...</span><span><img src="./public/assets/triangle-svgrepo-com.svg" style="transform: rotate(-90deg); width: 5px; height: 5px;" alt="triangle"></span></li>
+            </ul></span>
+            <span id="edit-cont">Edit
+              <ul class="file-tab hide-header" id="edit-tab">
+                <li><span>Undo</span><span>Ctrl+Z</span></li>
+                <li><span>Redo</span><span>Shift+Ctrl+Z</span></li>
+                <li><span>Toggle Last State</span><span>Alt+Ctrl+Z</span></li>
+              </ul>
+            </span>
+            <span>Image</span>
+            <span>Layer</span>
+            <span>Type</span>
+            <span>Select</span>
+            <span>Filter</span>
+            <span>3D</span>
+            <span>View</span>
+            <span>Plugins</span>
+            <span>Window</span>
+            <span>Help</span>
+          </div>
+        </div>
+        <div class="header-edit">
+          <div class="cont-edit">
+            <span><img src="./public/assets/home.png" style="filter: invert(70%); cursor: pointer;" width="20px" height="20px" alt="home"></span>
+            <span><img src="./public/assets/text.png" style="filter: invert(70%); display: inline;" width="20px" height="20px" alt="text"><img class="dropdown" src="./public/assets/down-arrow.png" style="filter: invert(70%); display: inline;" width="14px" height="14px" alt="dropdown"></span>
+            <span class="font-config">
+              <span><input placeholder="font-family" type="text" name="text" id="font-family"><img class="dropdown" src="./public/assets/down-arrow.png" style="filter: invert(70%); display: inline;" width="14px" height="14px" alt="dropdown"></span>
+              <span><input placeholder="Font-weight" type="text" name="" id="font-weight"><img class="dropdown" src="./public/assets/down-arrow.png" style="filter: invert(70%); display: inline;" width="14px" height="14px" alt="dropdown"></span>
+            </span>
+            <span><img src="./public/assets/text-size.png" style="filter: invert(70%);" width="20px" height="20px" alt="font-size"><input placeholder="Font-size" type="text" accept="0 1 2 3 4 5 6 7 8 9" name="number-size" id="font-size"><img class="dropdown" src="./public/assets/down-arrow.png" style="filter: invert(70%); display: inline;" width="14px" height="14px" alt="dropdown"></span>
+            <span><img src="./public/assets/text-aa-duotone-svgrepo-com.svg" style="filter: invert(70%);" width="20px" height="20px" alt="Aa"><input placeholder="Font-color" type="text" name="font-color" id="font-color"><img class="dropdown" src="./public/assets/down-arrow.png" style="filter: invert(70%); display: inline;" width="14px" height="14px" alt="dropdown"></span>
+            <span id="align-items"><img src="./public/assets/align-left-duotone-svgrepo-com.svg" style="filter: invert(70%);" width="20px" height="20px" alt="align-left" id="align-left"><img src="./public/assets/align-center-horizontal-duotone-svgrepo-com.svg" style="filter: invert(70%);" width="20px" height="20px" alt="align-center" id="align-center"><img src="./public/assets/align-right-duotone-svgrepo-com.svg" style="filter: invert(70%);" width="24px" height="24px" alt="align-right" id="align-right"></span>
+            <span><input type="color" name="color-picker" id="color-picker"></span>
+          </div>
+        </div>
+      </header>
+
+      <div class="sidebar">
+        <div class="tools">
+          <div id="add-text" class="text" onclick="createInput(), insertText()">
+            <img src="./public/assets/text.png" style="filter: invert(70%);" width="20px" height="20px" alt="text">
+          </div>
+
+        </div>
+      </div>
+
+      <main>
+        <div onmousemove="getXyCoords(event)" id="canvas">
+          <ul class="layer" id="Layer"></ul>
+        </div>
+      </main>
+    </div>
+
+    <script src="/main.js"></script>
+  </body>
+</html>
