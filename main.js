@@ -2,6 +2,7 @@ const addText = document.getElementById('add-text');
 const canvas = document.getElementById('canvas');
 const layer = document.querySelector('.layer');
 const listOneItem = document.querySelectorAll('li');
+
 let j = 0;
 
 const getXyCoords = (e) => {
@@ -142,6 +143,7 @@ fileCont.addEventListener('mouseleave', () => {
 const editCont = document.getElementById('edit-cont');
 const editTab = document.getElementById('edit-tab');
 
+
 editCont.addEventListener('click', () => {
   editTab.classList.toggle('reveal-header')
 })
@@ -153,6 +155,10 @@ editCont.addEventListener('mouseover', () => {
 editCont.addEventListener('mouseleave', () => {
   editTab.classList.remove('reveal-header')
 })
+
+const addEvent = (variable)=>{
+    variable.addEventListener()
+}
 
 const newFile = document.getElementById('new');
 
@@ -170,3 +176,24 @@ fontColor.addEventListener('keyup', (e) => {
     ul.style.color = fontColorValue;
   }
 })
+
+fontColor.addEventListener('change' , ()=>{
+
+})
+
+
+// color picker
+const getColorValue = document.getElementById("color-picker");
+
+getColorValue.addEventListener('change', ()=>{
+  fontColor.value = getColorValue.value;
+  ul.style.color = `${getColorValue.value}`
+})
+
+
+
+
+// (()=>{
+//   //  fontColor.value = getColorValue.value;
+//   console.log(getColorValue.value)
+// })
