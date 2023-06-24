@@ -124,41 +124,57 @@ fontFamilyInput.addEventListener('keyup', (e) => {
     }
 })
 
-const fileCont = document.getElementById('file-cont');
-const fileTab = document.getElementById('file-tab');
+const headerDropdown = (() => {
+  const fileCont = document.getElementById('file-cont');
+  const fileTab = document.getElementById('file-tab');
+  
+  fileCont.addEventListener('click', () => {
+    fileTab.classList.toggle('reveal-header')
+  })
+  
+  fileCont.addEventListener('mouseover', () => {
+    fileTab.classList.add('reveal-header');
+  })
+  
+  fileCont.addEventListener('mouseleave', () => {
+    fileTab.classList.remove('reveal-header')
+  })
+  
+  
+  const editCont = document.getElementById('edit-cont');
+  const editTab = document.getElementById('edit-tab');
+  
+  
+  editCont.addEventListener('click', () => {
+    editTab.classList.toggle('reveal-header')
+  })
+  
+  editCont.addEventListener('mouseover', () => {
+    editTab.classList.add('reveal-header')
+  })
+  
+  editCont.addEventListener('mouseleave', () => {
+    editTab.classList.remove('reveal-header')
+  })
+  
+  const helpCont = document.getElementById('help-cont');
+  const helpTab = document.getElementById('help-tab');
+  
+  helpCont.addEventListener('click', () => {
+    helpTab.classList.toggle('reveal-header')
+  })
+  
+  helpCont.addEventListener('mouseover', () => {
+    helpTab.classList.add('reveal-header')
+  })
+  
+  helpCont.addEventListener('mouseleave', () => {
+    helpTab.classList.remove('reveal-header')
+  })
+})();
 
-fileCont.addEventListener('click', () => {
-  fileTab.classList.toggle('reveal-header')
-})
-
-fileCont.addEventListener('mouseover', () => {
-  fileTab.classList.add('reveal-header');
-})
-
-fileCont.addEventListener('mouseleave', () => {
-  fileTab.classList.remove('reveal-header')
-})
 
 
-const editCont = document.getElementById('edit-cont');
-const editTab = document.getElementById('edit-tab');
-
-
-editCont.addEventListener('click', () => {
-  editTab.classList.toggle('reveal-header')
-})
-
-editCont.addEventListener('mouseover', () => {
-  editTab.classList.add('reveal-header')
-})
-
-editCont.addEventListener('mouseleave', () => {
-  editTab.classList.remove('reveal-header')
-})
-
-const addEvent = (variable)=>{
-    variable.addEventListener()
-}
 
 const newFile = document.getElementById('new');
 
