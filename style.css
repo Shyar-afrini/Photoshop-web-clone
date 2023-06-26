@@ -178,6 +178,11 @@ header{
     cursor: pointer;
 }
 
+.icon:hover{
+    background-color: #505050;
+}
+
+
 /* main section */
 
 main{
@@ -258,3 +263,19 @@ li{
         width: 600px;
     }
 }
+
+/* @media (max-width: 660px) and  (min-width: 375px){
+    .cont-edit{
+        width: 100vw;
+        height: fit-content;
+        display: flex;
+        justify-items: center;
+        border: 1px solid black;
+        
+    }
+
+    input{
+        width: 1em;
+    }
+
+} */

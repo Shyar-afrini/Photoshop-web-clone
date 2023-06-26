@@ -71,26 +71,6 @@ listOneItem.forEach(item => {
 })
 
 
-const fontInput = document.getElementById('font-size');
-const ul = document.querySelector('.layer');
-
-fontInput.addEventListener('keyup', (e) => {
-    if(e.key === 'Enter'){
-        const fontSize = fontInput.value;
-        ul.style.fontSize = `${fontSize}px`;
-    }
-});
-
-
-const fontWeightInput = document.getElementById('font-weight');
-
-fontWeightInput.addEventListener('keyup', (e) => {
-    if(e.key === 'Enter'){
-        const fontWeight = fontWeightInput.value;
-        ul.style.fontWeight = `${fontWeight}`;
-    }
-})
-
 
 const alignLeft = document.getElementById('align-left');
 const alignRight = document.getElementById('align-right');
@@ -108,21 +88,6 @@ alignCenter.addEventListener('click', () => {
   ul.style.justifyContent = 'center'
 })
 
-
-const fontFamilyInput = document.getElementById('font-family');
-
-fontFamilyInput.addEventListener('keyup', (e) => {
-    if(e.key === 'Enter'){
-      const fontFamily = fontFamilyInput.value;
-      if(fontFamily === 'poppins'){
-        ul.style.fontFamily = 'poppins'
-      }else if(fontFamily === 'orbitron'){
-        ul.style.fontFamily = 'orbitron'
-      }else{
-        ul.style.fontFamily = `${fontFamily}`
-      }
-    }
-})
 
 const headerDropdown = (() => {
   const fileCont = document.getElementById('file-cont');
@@ -197,6 +162,40 @@ fontColor.addEventListener('change' , ()=>{
 
 })
 
+const fontFamilyInput = document.getElementById('font-family');
+
+fontFamilyInput.addEventListener('keyup', (e) => {
+    if(e.key === 'Enter'){
+      const fontFamily = fontFamilyInput.value;
+      if(fontFamily === 'poppins'){
+        ul.style.fontFamily = 'poppins'
+      }else if(fontFamily === 'orbitron'){
+        ul.style.fontFamily = 'orbitron'
+      }else{
+        ul.style.fontFamily = `${fontFamily}`
+      }
+    }
+})
+
+const fontInput = document.getElementById('font-size');
+const ul = document.querySelector('.layer');
+
+fontInput.addEventListener('keyup', (e) => {
+    if(e.key === 'Enter'){
+        const fontSize = fontInput.value;
+        ul.style.fontSize = `${fontSize}px`;
+    }
+});
+
+
+const fontWeightInput = document.getElementById('font-weight');
+
+fontWeightInput.addEventListener('keyup', (e) => {
+    if(e.key === 'Enter'){
+        const fontWeight = fontWeightInput.value;
+        ul.style.fontWeight = `${fontWeight}`;
+    }
+})
 
 // color picker
 const getColorValue = document.getElementById("color-picker");

@@ -11,7 +11,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Photoshop</title>
-    <script src="/main.js" defer></script>
+    <script type="module" src="/main.js" defer></script>
   </head>
   <body>
 
@@ -70,10 +70,13 @@
 
       <div class="sidebar">
         <div class="tools">
-          <div id="add-text" class="text" onclick="createInput(), insertText()">
+          <div id="add-text" class="text icon" onclick="createInput(), insertText()">
             <img src="./public/assets/text.png" style="filter: invert(70%);" width="20px" height="20px" alt="text">
           </div>
-
+          <div class="add-image icon" id="add-image">
+            <input type="image" src="./public/assets/down-arrow.png" alt="">
+            <img style="filter: invert(70%); width: 20px; height: 20px;" src="./public/assets/gallery.png" alt="image upload">
+          </div>
         </div>
       </div>
 
