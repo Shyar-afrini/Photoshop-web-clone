@@ -182,6 +182,24 @@ header{
     background-color: #505050;
 }
 
+.add-image{
+    display: flex;
+    position: relative;
+}
+
+#image-picker{
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+#image-canvas{
+    display: none;
+    height: 100%;
+    width: auto;
+    z-index: 50;
+}
 
 /* main section */
 
@@ -206,6 +224,9 @@ main{
     position: relative;
     resize: both;
     overflow: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #canvas > ul{
@@ -215,7 +236,7 @@ main{
     width: 100%;
     height: 100%;
     background-color: transparent;
-    z-index: 40;
+    z-index: 46;
     list-style: none;
     resize: both;
     overflow: auto;
@@ -235,12 +256,42 @@ li{
 .style{
     background-color: transparent;
     border: 1px dashed #626262;
-    z-index: 42;
+    z-index: 58;
     display: block;
 }
 
 .input-hide{
     display: none;
+}
+
+
+/* aside section  */
+
+aside{
+    padding-block: 4rem;
+    padding-inline: 2rem;
+    background-color: #323232;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    position: absolute;
+    right: 0;
+    top: 4.5rem;
+    height: calc(100vh - 4.5rem);
+    border: 1px solid black;
+
+    transition: all .5s ease-in-out;
+}
+
+.aside{
+    opacity: 0;
+}
+
+.scale-container{
+    display: flex;
+    flex-direction: column;
+    color: #929292;
+    line-height: 2rem;
 }
 
 @media (max-width: 1290px) and (min-width: 800px){

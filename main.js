@@ -2,22 +2,16 @@ const addText = document.getElementById('add-text');
 const canvas = document.getElementById('canvas');
 const layer = document.querySelector('.layer');
 const listOneItem = document.querySelectorAll('li');
+const ul = document.querySelector('.layer');
 
 let j = 0;
-
-const getXyCoords = (e) => {
-  let xCoords = e.clientX;
-  let yCoords = e.clientY;
-
-
-}
 
 const createInput = () => {
   let i = j++;
 
   const input = document.createElement('input');
   input.setAttribute("id", `input-create${i}`)
-  input.classList.add(`style`)
+  input.classList.add('style')
 
   input.style.position = 'absolute';
 
@@ -178,7 +172,7 @@ fontFamilyInput.addEventListener('keyup', (e) => {
 })
 
 const fontInput = document.getElementById('font-size');
-const ul = document.querySelector('.layer');
+
 
 fontInput.addEventListener('keyup', (e) => {
     if(e.key === 'Enter'){
@@ -206,9 +200,50 @@ getColorValue.addEventListener('change', ()=>{
 })
 
 
+const imagePicker = document.getElementById('image-picker');
+const imageCanvas = document.getElementById('image-canvas');
 
 
-// (()=>{
-//   //  fontColor.value = getColorValue.value;
-//   console.log(getColorValue.value)
-// })
+window.addEventListener('load', function () {
+  imagePicker.addEventListener('change', function () {
+    if (this.files&&this.files[0]) {
+      imageCanvas.onload = () => {
+        URL.revokeObjectURL(imageCanvas.src);
+      }
+      imageCanvas.src = URL.createObjectURL(this.files[0]);
+    }
+    imageCanvas.style.display = "block"
+  });
+});
+
+
+const brightnessControl = document.getElementById('Brightness')
+const contrastControl = document.getElementById('Contrast');
+const grayControl = document.getElementById('gray');
+const blurControl = document.getElementById('blur');
+
+const changePicAttr = (() => {
+  brightnessControl.addEventListener('change', () => {
+    let brightnessValue = brightnessControl.value ;
+    imageCanvas.style.filter = `brightness(${brightnessValue}%)`
+  })
+  contrastControl.addEventListener('change', () => {
+    let contrastValue = contrastControl.value ;
+    imageCanvas.style.filter = `contrast(${contrastValue}%)`
+  })
+  grayControl.addEventListener('change', () => {
+    let grayValue = grayControl.value ;
+    imageCanvas.style.filter = `grayscale(${grayValue}%)`
+  })
+  blurControl.addEventListener('change', () => {
+    let blurValue = blurControl.value;
+    imageCanvas.style.filter = `blur(${blurValue}px)`
+  })
+})();
+
+const asidePanel = document.querySelector('.aside');
+
+
+imagePicker.addEventListener('change', () => {
+  asidePanel.style.opacity = '1'
+})

@@ -11,9 +11,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Photoshop</title>
+    <link rel="shortcut icon" href="/assets/photoshop-d6232244.png" type="image/x-icon">
     
-    <script type="module" crossorigin src="/assets/index-4aff79fb.js"></script>
-    <link rel="stylesheet" href="/assets/index-8b1505a8.css">
+    <script type="module" crossorigin src="/assets/index-a53326f9.js"></script>
+    <link rel="stylesheet" href="/assets/index-e476d198.css">
   </head>
   <body>
 
@@ -49,7 +50,7 @@
             <span>Window</span>
             <span id="help-cont">Help
               <ul class="file-tab hide-header" id="help-tab">
-                <li><span>Contact-Me</span><span><img style="width: 14px; height: 14px;" src="https://em-content.zobj.net/thumbs/160/apple/354/winking-face_1f609.png" alt="image"></span></li>
+                <li><span>About-Me</span><span><img style="width: 14px; height: 14px;" src="https://em-content.zobj.net/thumbs/160/apple/354/winking-face_1f609.png" alt="image"></span></li>
               </ul>
             </span>
           </div>
@@ -70,23 +71,37 @@
         </div>
       </header>
 
+      <!-- sidebar section -->
+
       <div class="sidebar">
         <div class="tools">
           <div id="add-text" class="text icon" onclick="createInput(), insertText()">
             <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAOxAAADsQBlSsOGwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAA6/SURBVHic7d1bzGx3XcfhT8sGWqgcgkoVFJFDQQ6BEJBGPAAiES8MwSrxkBiNaDDGGCXeEokHYjSg4ULkoBgjYoIaE+QQKgaxCVgkcpY22krAIoFWWqBQWi+mBKht9+zd7vc/6/09T7Kyb7/zZjLrs9esmSkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAO8dZqwds2FnVo6unVU+sLqgeVN2juufCXQDH0XU3H1dWH67eWV1cvb+6aeGuzRIAp+6bq+dVP1V9++ItANNdXv1Z9cfVxxZv2RQBsL/zqxdWP13dfekSAG7p+upV7V6nP7F2yjbcZfWADTiren7119V3VSfWzgHgVpxo93bsz1VXV5eunXP4XAG4ffetXl398OohAJyS11c/U12zesihEgC37ZuqN1aPXT0EgNPygeqZ1UdXDzlEAuDWPaD6p+rbFu8A4I75j+opuUHw/zl79YADdN/qTTn5AxwHD67+vrr36iGHRgB8rbOqV1aPWj0EgDvNY6tXrB5xaHwK4Gs9v/rV1SMAuNN9R7u3Ad69esihcA/AV9y/+lB1n9VDADgjPl09It8TULkC8NV+r92NIgAcT+e2+7r2N6wecghcAdg5v92douesHgLAGfX56iH5VICbAG/2Czn5A0xwTvWzq0ccAlcAdn+Dj7QrQgCOv8uqhzf8VwRdAajH5OQPMMlDq0euHrGaAKinrh4AwJF72uoBqwmA3a9HATDL+Nd+AVAXrB4AwJEb/9ovAOpbVg8A4Mh96+oBqwmA+rrVAwA4cvdaPWA1HwOsG/N3AJjmpob/J9iJb/jnQAEGG30OHF0/ADCVAACAgQQAAAwkAABgIAEAAAMJAAAYSAAAwEACAAAGEgAAMJAAAICBBAAADCQAAGAgAQAAAwkAABhIAADAQAIAAAYSAAAwkAAAgIEEAAAMdGL1APb20eqS1SNY5oHVhatH7OmSds9XZrqw3fMVDt5NGzled6b+AGzCRa1/Du57XHSG/gZsw+ta/xzc9xjNWwAAMJAAAICBBAAADCQAAGAgAQAAAwkAABhIAADAQAIAAAYSAAAwkAAAgIEEAAAMJAAAYCABAAADCQAAGEgAAMBAAgAABhIAADCQAACAgQQAAAwkAABgIAEAAAMJAAAYSAAAwEACAAAGEgAAMJAAAICBBAAADCQAAGAgAQAAAwkAABhIAADAQAIAAAYSAAAwkAAAgIEEAAAMJAAAYCABAAADCQAAGEgAAMBAAgAABhIAADCQAKgvrR6wp63sBGa7cfWAPY1/TRUAdd3qAXv6zOoBAHu4dvWAPY1/TRUAdfXqAXvayk5gtq28Vm1l5xkjAOry1QP2dNnqAQB78Jq6EQKgPrB6wJ4+tHoAwB4+uHrAnray84wRAPWO1QP28PnqXatHAOzhndX1q0fs4e2rB6wmAOriDv+u1X+uPrd6BMAePltdsnrESXypetvqEasJgLqqw38ivHb1AIBT8LrVA07i4up/Vo9YTQDs/OnqAbfjs9VfrR4BcAr+ssO+annIr/lHRgDs/EV1xeoRt+Hl+bgKsC2fql61esRtuDL/qaoEwJd9sXrx6hG34rrqd1ePADgNL+4wrwK8qPrC6hGHQAB8xcurf1094hZeVH1s9QiA0/Bf1W+vHnELl1avXj2Cw/SEdh+5u+kAjn+p7nZmHy4bclHrn5P7Hhedob8B23P3dv+xWv2cvKnd1YjHndmHuy2uAHytS6sXrB5RXVP9WC5TAdt2fbvXskP43v1fqd6zegSH7yWtq9Trqx848w+RjXEFgC17Wmuvrr7szD9Ejouzq9e05uT/nCN4fGyPAGDrLmr3GnfUz8c/ydVuTtFZ7e7AP6on6dXV04/kkbFFAoDj4Bnt3uI8qufi77R7LYfT8uzq053ZJ+ml1UOP6gGxSQKA4+JhnfkbA/+3eu5RPSCOtwd0Zt4SuK56Ybs7ZeH2CACOk7tWv9zu5sA7+/n3d9WDju6hMMX3Vm/pzjnxv6RdWMA+BADH0QOrP2j3led39Hn3puq7j3Y+Ez2y+q3q/e3/5Pxc9dbqedV9jn4yGycAOM7uW/18ux/pOZVPC7yv+s3qEUc/efvcHHHHnV89sbqg3WWn86p7trtv4Jrq8uqD1bs6zK/FZBsu6vB/Ye3LfjTftc7pO7d6UruT+kOre7ULhOvavWVwZfXhdq+p/71oI8CRcQUAuFP5bCQADCQAAGAgAQAAAwkAABhIAADAQAIAAAYSAAAwkAAAgIEEAAAMJAAAYCABAAADCQAAGEgAAMBAAgAABhIAADCQAACAgQQAAAwkAABgIAEAAAMJAAAYSAAAwEACAAAGEgAAMJAAAICBBAAADCQAAGAgAQAAAwkAABhIAADAQAIAAAYSAAAwkAAAgIEEAAAMJAAAYCABAAADCQAAGEgAAMBAAgAABhIAADCQAACAgQQAAAwkAABgIAEAAAMJAAAYSAAAwEACAAAGEgAAMJAAAICBBAAADCQAAGAgAQAAAwkAABhIAADAQAIAAAYSAAAwkAAAgIEEAAAMJAAAYCABAAADCQAAGEgAAMBAAgAABhIAADCQAACAgQQAAAwkAABgIAEAAAMJAAAYSAAAwEACAAAGEgAAMJAAAICBBAAADCQAAGAgAQAAAwkAABhIAADAQAIAAAYSAAAwkAAAgIEEAAAMJAAAYCABAAADCQAAGEgAAMBAAgAABhIAADCQAACAgQQAAAwkAABgIAEAAAMJAAAYSAAAwEACAAAGEgAAMJAAAICBBAAADCQAAGAgAQAAAwkAABhIAADAQAIAAAYSAAAwkAAAgIEEAAAMJAAAYCABAAADCQAAGEgAAMBAAgAABhIAADCQAACAgQQAAAwkAABgIAEAAAMJAAAYSAAAwEACAAAGEgAAMJAAAICBBAAADCQAAGAgAQAAAwkAABhIAADAQAIAAAYSAAAwkAAAgIEEAAAMJAAAYCABAAADCQAAGEgAAMBAAgAABhIAADCQAACAgQQAAAwkAABgIAEAAAMJAAAYSAAAwEACAAAGEgAAMJAAAICBBAAADCQAAGAgAQAAAwkAABhIAADAQAIAAAYSAAAwkAAAgIEEAAAMJAAAYCABAAADCQAAGEgAAMBAAgAABhIAADCQAACAgQQAAAwkAABgIAEAAAMJAAAYSAAAwEACAAAGEgAAMJAAAICBBAAADCQAAGAgAQAAAwkAABhIAADAQAIAAAYSAAAwkAAAgIEEAAAMJAAAYCABAAADCQAAGEgAAMBAAgAABhIAADCQAACAgQQAAAwkAABgIAEAAAMJAAAYSAAAwEACAAAGEgAAMJAAAICBBAAADCQAAGAgAQAAAwkAABhIAADAQAIAAAYSAAAwkAAAgIEEAAAMJAAAYCABAAADCQAAGEgAAMBAAgAABhIAADCQAACAgQQAAAwkAABgIAEAAAMJAAAYSAAAwEACAAAGEgAAMJAAAICBBAAADCQAAGAgAQAAAwkAABhIAADAQAIAAAYSAAAwkAAAgIEEAAAMJAAAYCABAAADCQAAGEgAAMBAAgAABhIAADCQAACAgQQAAAx01uoBcETOrh5z83FB9Y3VedVdV446BQ+sLlw9Yk+XVB9dPWJPX6yura6qPly9t3pfdePKUXAUBADH2YnqmdVPVs+o7rd2DhvxyerN1Z/f/O8Na+cAsK9zq1+qrqhucjjuwPGf1S9W5wTAQXt69aHWnzgcx+u4rHpWABycc6qXtv5E4Tjex2uqewTHgHsAOA7Or95QPX71EEa4tPqhdjcOwmYJALbuQdVbq4esHsIol7V7u+nK1UPgdAkAtuzrq7dXj1g9hJE+Uj2l+sTqIXA6fBEQW3Wien1O/qzzsOq11V1WD4HT4YnLVv1Gu8/3w0oPbndz4NsW74BT5i0AtujR1bvbzrf4cbzdUD2h+rfVQ+BUeAuALXpZTv4cjhPV768eAafKFQC25vuqf1g9Am7F97S7KRU2wRUAtubXVg+A2/CC1QPgVLgCwJbcv92vzJ1YPQRuxQ3tfrXRFwSxCa4AsCU/kpM/h+tE9ezVI2BfAoAtefrqAXASnqNshrcA2JJPVN+wegTcjqva/TYFHDwBwFbcr/rk6hGwh/tVn1o9Ak7GWwBsxUNXD4A9+WEqNkEAsBX3WT0A9uS5yiYIALbiHqsHwJ7OWz0A9iEA2IovrB4Ae/r86gGwDwHAVnxm9QDYk+cqmyAA2IorVw+APV2xegDsw8cA2Yqzq2urc1cPgdvx2Xb3ANy0egicjCsAbMWN1aWrR8BJvCsnfzZCALAlF68eACfhp6rZDAHAlvzt6gFwEn+zegDsyz0AbM37qketHgG34r3VY1ePgH25AsDW/OHqAXAbXrp6AJwKVwDYmrtXl1cPWD0EvsoV1cPzhVVsiCsAbM311a+vHgG38IKc/NkYVwDYorOqN1ffv3oIVG+sfnD1CDhVAoCtun/1nur81UMY7arq8dXHVw+BU+UtALbqquq5+eEV1vlc9Zyc/NkoAcCW/WP1E9UNq4cwzherH6/esXoIwGTPaPcLbDc5HEdwXFs9KwAOwhOqy1p/cnAc7+Pfq8cFwEG5d/WKdj8ctPpE4Thex5eqP6ruFQAH68ntfjho9UnDcTyOt1RPCoDNeHL1yuqa1p9EHNs6rm53Nek7g2PK9wAwwTnVhdVTq0dXF7T7/oDzqrst3MV6X2h3U9/H272//952P+l7SbtvnQQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATuL/ANILJbw2b9d5AAAAAElFTkSuQmCC" style="filter: invert(70%);" width="20px" height="20px" alt="text">
           </div>
           <div class="add-image icon" id="add-image">
-            <input type="image" src="./public/assets/down-arrow.png" alt="">
             <img style="filter: invert(70%); width: 20px; height: 20px;" src="/assets/gallery-a428ed22.png" alt="image upload">
+            <input style="cursor: pointer;" type="file" name="file-picker" id="image-picker" accept=".png, .jpg, .jpeg">
           </div>
         </div>
       </div>
 
+      <!-- main section  -->
+
       <main>
         <div onmousemove="getXyCoords(event)" id="canvas">
           <ul class="layer" id="Layer"></ul>
+          <img src="nothing" alt="image for upload" id="image-canvas">
         </div>
       </main>
+
+      <aside class="aside">
+        <div class="scale-container"><span>Brightness</span><span><input min="0" max="200" value="100" type="range" name="" id="Brightness"></span></div>
+        <div class="scale-container"><span>Contrast</span><span><input min="0" max="200" value="100" type="range" name="" id="Contrast"></span></div>
+        <div class="scale-container"><span>Gray-scale</span><span><input min="0" max="200" value="0" type="range" name="" id="gray"></span></div>
+        <div class="scale-container"><span>Blur</span><span><input min="0" max="10" value="0" type="range" name="" id="blur"></span></div>
+        
+        
+      </aside>
     </div>
 
   </body>

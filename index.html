@@ -11,6 +11,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Photoshop</title>
+    <link rel="shortcut icon" href="./public/assets/photoshop.png" type="image/x-icon">
     <script type="module" src="/main.js" defer></script>
   </head>
   <body>
@@ -47,7 +48,7 @@
             <span>Window</span>
             <span id="help-cont">Help
               <ul class="file-tab hide-header" id="help-tab">
-                <li><span>Contact-Me</span><span><img style="width: 14px; height: 14px;" src="https://em-content.zobj.net/thumbs/160/apple/354/winking-face_1f609.png" alt="image"></span></li>
+                <li><span>About-Me</span><span><img style="width: 14px; height: 14px;" src="https://em-content.zobj.net/thumbs/160/apple/354/winking-face_1f609.png" alt="image"></span></li>
               </ul>
             </span>
           </div>
@@ -68,23 +69,37 @@
         </div>
       </header>
 
+      <!-- sidebar section -->
+
       <div class="sidebar">
         <div class="tools">
           <div id="add-text" class="text icon" onclick="createInput(), insertText()">
             <img src="./public/assets/text.png" style="filter: invert(70%);" width="20px" height="20px" alt="text">
           </div>
           <div class="add-image icon" id="add-image">
-            <input type="image" src="./public/assets/down-arrow.png" alt="">
             <img style="filter: invert(70%); width: 20px; height: 20px;" src="./public/assets/gallery.png" alt="image upload">
+            <input style="cursor: pointer;" type="file" name="file-picker" id="image-picker" accept=".png, .jpg, .jpeg">
           </div>
         </div>
       </div>
 
+      <!-- main section  -->
+
       <main>
         <div onmousemove="getXyCoords(event)" id="canvas">
           <ul class="layer" id="Layer"></ul>
+          <img src="nothing" alt="image for upload" id="image-canvas">
         </div>
       </main>
+
+      <aside class="aside">
+        <div class="scale-container"><span>Brightness</span><span><input min="0" max="200" value="100" type="range" name="" id="Brightness"></span></div>
+        <div class="scale-container"><span>Contrast</span><span><input min="0" max="200" value="100" type="range" name="" id="Contrast"></span></div>
+        <div class="scale-container"><span>Gray-scale</span><span><input min="0" max="200" value="0" type="range" name="" id="gray"></span></div>
+        <div class="scale-container"><span>Blur</span><span><input min="0" max="10" value="0" type="range" name="" id="blur"></span></div>
+        
+        
+      </aside>
     </div>
 
   </body>
